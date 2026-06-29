@@ -1,10 +1,18 @@
 
 const App = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
    <>
    <main>
-    <h1 className="text-3xl font-bold">Hello There</h1>
-    <p className="text-gray-300">lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div className="pattern"/>
+
+    <div className="wrapper">
+      <header>
+        <img src="./hero.png" alt="Hero Banner" />
+        <h1>Find Movies You'll Enjoy Without the Hustle</h1>
+      </header>
+    </div>
    </main>
    </>
   )
