@@ -1,21 +1,25 @@
+import { useState } from "react";
+import Search from "./components/Search";
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
-   <>
-   <main>
-    <div className="pattern"/>
+    <main>
+      <div className="pattern" />
 
-    <div className="wrapper">
-      <header>
-        <img src="./hero.png" alt="Hero Banner" />
-        <h1>Find Movies You'll Enjoy Without the Hustle</h1>
-      </header>
-    </div>
-   </main>
-   </>
-  )
-}
+      <div className="wrapper">
+        <header>
+          <img src="./hero.png" alt="Hero Banner" />
+          <h1>
+            Find <span className="text-gradient">Movies</span> You'll Enjoy
+            Without the Hustle
+          </h1>
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        </header>
+      </div>
+    </main>
+  );
+};
 
-export default App
+export default App;
