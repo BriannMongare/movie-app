@@ -2,7 +2,7 @@
 
 A sleek, responsive web application that fetches real-time movie and TV show data using the TMDB API. The project is fully optimized and continuously deployed via Vercel.
 
-🚀 **Live Demo:** [brianmongare-movie-app.vercel.app](https://vercel.app)
+🚀 **Live Demo:** [brianmongare-movie-app.vercel.app](https://brianmongare-movie-app.vercel.app/)
 
 ---
 
@@ -18,9 +18,9 @@ A sleek, responsive web application that fetches real-time movie and TV show dat
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework:** React (via Vite / Next.js) <!-- Edit this to match your choice -->
+- **Frontend Framework:** React (via Vite)
 - **Styling:** Tailwind CSS / CSS Modules
-- **Data Fetching:** Fetch API / Axios
+- **Data Fetching:** Fetch API
 - **API Provider:** [The Movie Database (TMDB)](https://themoviedb.org)
 - **Hosting & Deployment:** Vercel
 
