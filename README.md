@@ -1,87 +1,68 @@
 # 🎬 Movie App
 
-A sleek, responsive web application that fetches real-time movie and TV show data using the TMDB API. The project is fully optimized and continuously deployed via Vercel.
-
-🚀 **Live Demo:** [brianmongare-movie-app.vercel.app](https://brianmongare-movie-app.vercel.app/)
-
----
+A polished movie discovery web app built with React and Vite. Users can browse popular movies, search by title, and view trending searches powered by Appwrite and the TMDB API.
 
 ## ✨ Features
 
-- **Real-Time Data:** Fetches trending, top-rated, and upcoming movies directly from TMDB.
-- **Search Functionality:** Dynamic search bar to find specific titles instantly.
-- **Detailed Views:** In-depth information for each movie, including ratings, release dates, and overviews.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewports.
-- **CI/CD Integration:** Automated preview and production builds powered by Vercel.
-
----
+- Browse a curated list of popular movies from TMDB
+- Search movies instantly by title
+- Track popular search terms with Appwrite
+- Enjoy a responsive, modern UI on desktop and mobile
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework:** React (via Vite)
-- **Styling:** Tailwind CSS / CSS Modules
-- **Data Fetching:** Fetch API
-- **API Provider:** [The Movie Database (TMDB)](https://themoviedb.org)
-- **Hosting & Deployment:** Vercel
+- React 19
+- Vite
+- Appwrite
+- TMDB API
+- Tailwind CSS
 
----
+## 📁 Project Structure
 
-## 🚀 Local Setup & Installation
+- src/App.jsx: main app logic, movie fetching, and UI composition
+- src/appwrite.js: Appwrite integration for storing and retrieving trending searches
+- src/components/: reusable UI components such as Search, MovieCard, and Spinner
 
-Follow these steps to run the project locally on your machine.
+## 🚀 Getting Started
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com
-cd movie-app
-```
+### 1. Install dependencies
 
-### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### 3. Configure Environment Variables
-Create a `.env` file in the root directory of your project. Do **not** commit this file to GitHub (it is ignored via `.gitignore`). 
+### 2. Configure environment variables
 
-Add your TMDB API token/key using the appropriate prefix for your framework:
+Create a .env file in the project root and add the following values:
 
 ```env
-# For Vite projects:
-VITE_TMDB_API_KEY=your_actual_tmdb_api_key_here
-
-# For Next.js projects:
-NEXT_PUBLIC_TMDB_API_KEY=your_actual_tmdb_api_key_here
+VITE_TMDB_API_KEY=your_tmdb_api_key
+VITE_APPWRITE_PROJECT_ID=your_appwrite_project_id
+VITE_APPWRITE_DATABASE_ID=your_appwrite_database_id
+VITE_APPWRITE_COLLECTION_ID=your_appwrite_collection_id
+VITE_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
 ```
 
-### 4. Run the Development Server
+> Make sure your Appwrite collection includes fields such as searchTerm, count, movie_id, and poster_url.
+
+### 3. Run the development server
+
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) (or the port specified in your terminal) to view the app.
 
----
+Then open http://localhost:5173 to view the app.
 
-## 🌐 Production Deployment (Vercel)
+## ▶️ Available Scripts
 
-This project is configured for seamless deployment on Vercel. 
+- npm run dev — start the Vite development server
+- npm run build — create a production build
+- npm run preview — preview the production build locally
 
-### Critical Configuration Step:
-Because the `.env` file is excluded from your Git repository for security, you must manually add your API keys to Vercel for the live site to work:
+## 🌐 Deployment
 
-1. Go to your **Vercel Dashboard** and select your project.
-2. Navigate to **Settings > Environment Variables**.
-3. Add the key name (e.g., `VITE_TMDB_API_KEY`) and paste your TMDB token as the value.
-4. Ensure **Production**, **Preview**, and **Development** checkboxes are all checked.
-5. Save and trigger a new deployment to apply the changes.
+This app can be deployed to Vercel or any other static hosting platform. Be sure to add the same environment variables in your deployment settings.
 
----
+## 🤝 Contributing
 
-## 🌿 Git Branching Workflow
-
-To keep the codebase stable, this project follows a feature-branch workflow:
-
-1. **`main`**: Houses the production-ready code. Pushes here instantly update the live site.
-2. **`feature/...`**: Used for developing new components or fixing bugs.
-   - Example: `git checkout -b feature/search-bar`
-   - Open a Pull Request on GitHub to preview changes via Vercel's automated staging URLs before merging.
+Contributions are welcome. Feel free to fork the repository, create a feature branch, and submit a pull request with your improvements.
